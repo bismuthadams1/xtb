@@ -432,10 +432,10 @@ subroutine get_jab(env, tblite, mol, fragment, dipro)
    dipro%totjab(3)=sqrt(Vtot(3))*autoev
    
    write(*,'(A)') ".............................................................................."
-   call ctx%message(":  total |J(AB,eff)| for hole transport (occ. MOs) :"//format_string(sqrt(Vtot(1))*autoev, '(f20.3)')//" eV  :")
+   call ctx%message(":  total |J(AB,eff)| for hole transport (occ. MOs) :"//format_string(sqrt(Vtot(1))*autoev, '(f20.6)')//" eV  :")
    call ctx%message(":  total |J(AB,eff)| for charge transport (unocc. MOs) :"//format_string(sqrt(Vtot(2))*autoev,& 
-          &'(f16.3)')//" eV  :")
-   call ctx%message(":  total |J(AB,eff)| for charge transfer (CT) :"//format_string(sqrt(Vtot(3))*autoev, '(f25.3)')//" eV  :")
+          &'(f16.6)')//" eV  :")
+   call ctx%message(":  total |J(AB,eff)| for charge transfer (CT) :"//format_string(sqrt(Vtot(3))*autoev, '(f25.6)')//" eV  :")
    write(*,'(A)') ".............................................................................."
 
    write(*,*) " "
